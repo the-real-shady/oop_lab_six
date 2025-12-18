@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(BalagurFateLab6)
+project(BalagurFateLab7)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -29,7 +29,7 @@ include_directories(
 )
 
 # Главная программа
-add_executable(balagur_lab6
+add_executable(balagur_lab7
     main.cpp
 )
 
@@ -46,6 +46,7 @@ target_link_libraries(gtests
 )
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+    target_link_libraries(balagur_lab7 pthread)
     target_link_libraries(gtests pthread)
 endif()
 
